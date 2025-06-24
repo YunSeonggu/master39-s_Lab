@@ -1,0 +1,32 @@
+{
+  "name": "blog-automation-web",
+  "version": "1.0.0",
+  "description": "네이버 블로그 SEO 자동화 웹 서비스",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "blog",
+    "seo",
+    "automation",
+    "naver",
+    "gpt",
+    "openai"
+  ],
+  "author": "Master39",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+} 

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 검은 배경 -->
+  <rect width="64" height="64" fill="#000000" rx="8"/>
+  
+  <!-- 플라스크 심볼 (간단 버전) -->
+  <g transform="translate(24, 32)">
+    <!-- 플라스크 몸체 -->
+    <path d="M-8,-6 L8,-6 L12,12 L-12,12 Z" fill="#ffffff" stroke-width="1" rx="1"/>
+    
+    <!-- 플라스크 목 -->
+    <rect x="-2" y="-12" width="4" height="6" fill="#ffffff"/>
+    
+    <!-- 플라스크 입구 -->
+    <rect x="-3" y="-14" width="6" height="2" fill="#ffffff" rx="1"/>
+    
+    <!-- 액체 -->
+    <path d="M-6,2 L6,2 L10,10 L-10,10 Z" fill="#4fd1c7"/>
+    
+    <!-- AI 텍스트 -->
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#000000">AI</text>
+  </g>
+  
+  <!-- 시험관 -->
+  <g transform="translate(44, 32)">
+    <!-- 시험관 몸체 -->
+    <rect x="-3" y="-12" width="6" height="18" fill="#ffffff" rx="3"/>
+    
+    <!-- 시험관 입구 -->
+    <rect x="-3.5" y="-14" width="7" height="2" fill="#ffffff" rx="1"/>
+    
+    <!-- 시험관 액체 -->
+    <rect x="-2" y="0" width="4" height="5" fill="#4fd1c7" rx="2"/>
+    
+    <!-- 측정 선들 -->
+    <line x1="-1.5" y1="-8" x2="1.5" y2="-8" stroke="#333333" stroke-width="0.5"/>
+    <line x1="-1.5" y1="-4" x2="1.5" y2="-4" stroke="#333333" stroke-width="0.5"/>
+    <line x1="-1.5" y1="0" x2="1.5" y2="0" stroke="#333333" stroke-width="0.5"/>
+  </g>
+  
+  <!-- 작은 원들 -->
+  <circle cx="50" cy="14" r="2" fill="#4fd1c7" opacity="0.8"/>
+  <circle cx="54" cy="10" r="1.5" fill="#4fd1c7" opacity="0.6"/>
+  <circle cx="46" cy="18" r="3" fill="#4fd1c7" opacity="1"/>
+</svg> 

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <meta name="theme-color" content="#667eea">
+    <title>Master39's 블로그 - AI를 바라보는 시선</title>
+    
+    <!-- Favicon 설정 -->
+    <link rel="icon" type="image/svg+xml" href="new-favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="new-favicon.svg?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="new-favicon.svg?v=2">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 다크 모드 강제 방지 스타일 -->
+    <style>
+        /* 브라우저 다크 모드 강제 차단 */
+        html {
+            color-scheme: light only !important;
+            background-color: #ffffff !important;
+        }
+        
+        body {
+            background-color: #ffffff !important;
+            color: #333333 !important;
+        }
+        
+        /* 모든 요소의 색상 강제 설정 */
+        * {
+            color-scheme: light only !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="master39-logo-final.png?v=4" alt="Master39's Lab" class="logo-full-image">
+                <span class="logo-text">Master39's_블로그</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">블로그</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#premium" class="nav-link premium-link">프리미엄</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gpts" class="nav-link">GPTS 이용하기</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">서비스</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#community" class="nav-link">커뮤니티</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#info" class="nav-link">유튜브</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 메인 히어로 섹션 -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="floating-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">AI를 여행하는 새로운 관점</p>
+                <h1 class="hero-title">
+                    AI를 바라보는 시선<br>
+                    이제는 미래가 아닌 현재
+                </h1>
+                <p class="hero-description">
+                    비개발자, 비전문가의 시선으로 바라보는 AI
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openModal('learn-modal')">
+                        <span>AI 학습 시작하기</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="openModal('gpts-modal')">
+                        <span>무료 GPTS 체험하기</span>
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-blog-automation" onclick="openModal('blog-automation-modal')">
+                        <span>✍️ 블로그글쓰기 자동화</span>
+                        <span class="arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>더 알아보기</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- 블로그 섹션 -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>📝 Master39's_블로그</h2>
+                <p>AI와 기술 트렌드, 개발 노하우를 공유하는 블로그입니다.</p>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card featured" onclick="openBlogPost('post1')">
+                    <div class="blog-category">🚀 AI 트렌드</div>
+                    <h3>AI를 활용한 웹 개발의 미래</h3>
+                    <p>인공지능 기술이 웹 개발에 가져올 혁신적 변화와 새로운 가능성을 탐구해봅니다.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">2024.06.20</span>
+                        <span class="blog-views">👁 1,234</span>
+                    </div>
+                </article>
+
+                <article class="blog-card" onclick="openBlogPost('post2')">
+                    <div class="blog-category">💻 개발 팁</div>
+                    <h3>React와 AI의 완벽한 결합</h3>
+                    <p>React 프로젝트에 AI 기능을 통합하는 실용적인 방법들을 단계별로 소개합니다.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">2024.06.18</span>
+                        <span class="blog-views">👁 892</span>
+                    </div>
+                </article>
+
+                <article class="blog-card" onclick="openBlogPost('post3')">
+                    <div class="blog-category">🎨 디자인</div>
+                    <h3>사용자 경험을 향상시키는 UI 디자인</h3>
+                    <p>모던한 웹 디자인의 핵심 원칙과 실제 적용 사례를 통해 배워보세요.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">2024.06.15</span>
+                        <span class="blog-views">👁 756</span>
+                    </div>
+                </article>
+
+                <article class="blog-card" onclick="openBlogPost('post4')">
+                    <div class="blog-category">⚡ 성능</div>
+                    <h3>웹사이트 성능 최적화 완벽 가이드</h3>
+                    <p>로딩 속도부터 SEO까지, 웹사이트 성능을 극대화하는 모든 방법을 공개합니다.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">2024.06.12</span>
+                        <span class="blog-views">👁 1,456</span>
+                    </div>
+                </article>
+
+                <article class="blog-card" onclick="openBlogPost('post5')">
+                    <div class="blog-category">🔧 도구</div>
+                    <h3>개발자를 위한 필수 AI 도구 10선</h3>
+                    <p>생산성을 극대화하는 최신 AI 개발 도구들을 실제 사용 경험과 함께 소개합니다.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">2024.06.10</span>
+                        <span class="blog-views">👁 2,134</span>
+                    </div>
+                </article>
+
+                <article class="blog-card" onclick="openBlogPost('post6')">
+                    <div class="blog-category">📊 분석</div>
+                    <h3>데이터 분석으로 보는 웹 트렌드</h3>
+                    <p>최신 웹 기술 트렌드를 데이터와 통계로 분석하여 미래를 예측해봅니다.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">2024.06.08</span>
+                        <span class="blog-views">👁 1,023</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">다음 →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서비스 섹션 -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>서비스</h2>
+                <p>Master39's 블로그에서 제공하는 다양한 실용적인 서비스를 이용해보세요.</p>
+            </div>
+
+            <div class="service-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">⚡</div>
+                    <h3>블로그 버튼 생성기</h3>
+                    <p>블로그용 커스텀 HTML 버튼을 섹게 다가언도고 생성할 수 있습니다.</p>
+                    <p class="service-description">색상, 폰트, 크기 등을 활다는 대로 커스터마이징하여 블로그에 사용할 수 있는 매력적인 버버튼 HTML 코드를 생성합니다.</p>
+                                         <button class="service-btn" onclick="openModal('service-modal')">서비스 이용하기</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>네이버 SEO 블로그 자동화</h3>
+                    <p>네이버 최상위 키워드 분석과 AI 블로그 글 자동 생성</p>
+                    <p class="service-description">네이버 SEO 최상위 키워드를 분석하고, GPT API를 활용해 SEO 최적화 블로그 글을 자동으로 생성합니다.</p>
+                    <button class="service-btn" onclick="openModal('seo-blog-modal')">서비스 이용하기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 알림 배너 -->
+    <div class="notification-banner">
+        <div class="banner-content">
+            <span class="banner-icon">🔔</span>
+            <span class="banner-text">이제 코딩 지식 없이도 누구나 웹 서비스 개발 가능!</span>
+            <span class="banner-highlight">노코드 웹 개발 AI 러버튼 DEV</span>
+                         <button class="banner-btn" onclick="openModal('banner-modal')">자료 받을 신청하기</button>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="master39-logo-final.png?v=4" alt="Master39's Lab" class="footer-logo-full">
+                    <span class="logo-text">Master39's_블로그</span>
+                </div>
+                <p class="footer-description">
+                    실용 보고서 분석글 독하어 온<br>
+                    공지들의 미래을 탐색합니다.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>블로그</h4>
+                    <ul>
+                        <li><a href="#">최신 AI소식</a></li>
+                        <li><a href="#">최신 시스템</a></li>
+                        <li><a href="#">화제의 이슈</a></li>
+                        <li><a href="#">라이프스타일</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>GPTS 이용하기</h4>
+                    <ul>
+                        <li><a href="#">초보자 가이드</a></li>
+                        <li><a href="#">블로그 GPTS</a></li>
+                        <li><a href="#">그 외 GPTS</a></li>
+                        <li><a href="#">다운로드</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>서비스</h4>
+                    <ul>
+                        <li><a href="#">전체서비스</a></li>
+                        <li><a href="#">블로그 버튼 생성기</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>커뮤니티</h4>
+                    <ul>
+                        <li><a href="#">실시간 채팅</a></li>
+                        <li><a href="#">오픈 채팅방</a></li>
+                        <li><a href="#">비즈니스 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 모달 창들 -->
+    <!-- AI 학습 모달 -->
+    <div id="learn-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('learn-modal')">&times;</span>
+            <h2>🤖 AI 학습 시작하기</h2>
+            <div class="modal-body">
+                <p>AI 기술을 체계적으로 학습할 수 있는 다양한 코스를 제공합니다.</p>
+                <div class="course-list">
+                    <div class="course-item">
+                        <h3>📚 기초 AI 입문</h3>
+                        <p>AI의 기본 개념과 원리를 쉽게 이해할 수 있는 입문 과정</p>
+                        <button class="course-btn">시작하기</button>
+                    </div>
+                    <div class="course-item">
+                        <h3>🔬 머신러닝 실습</h3>
+                        <p>실제 데이터를 활용한 머신러닝 모델 구축 실습</p>
+                        <button class="course-btn">시작하기</button>
+                    </div>
+                    <div class="course-item">
+                        <h3>🎯 ChatGPT 활용법</h3>
+                        <p>업무 효율성을 높이는 ChatGPT 활용 전략</p>
+                        <button class="course-btn">시작하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GPTS 체험 모달 -->
+    <div id="gpts-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gpts-modal')">&times;</span>
+            <h2>⚡ 무료 GPTS 체험하기</h2>
+            <div class="modal-body">
+                <p>다양한 용도의 커스텀 GPT를 무료로 체험해보세요.</p>
+                <div class="gpts-grid">
+                    <div class="gpt-card">
+                        <div class="gpt-icon">🔮</div>
+                        <h3>운명통합관상AI GPT</h3>
+                        <p>사주팔자, 주역, 관상을 통합한 맞춤형 운세 분석</p>
+                        <button class="gpt-btn" onclick="openMaster39GPT()">체험하기</button>
+                    </div>
+                    <div class="gpt-card">
+                        <div class="gpt-icon">📈</div>
+                        <h3>StockPulseGPT Master39 Pro+</h3>
+                        <p>실시간 주식 뉴스, 기술 분석, 재무 진단 전문가</p>
+                        <button class="gpt-btn" onclick="openStockPulseGPT()">체험하기</button>
+                    </div>
+                    <div class="gpt-card">
+                        <div class="gpt-icon">🎨</div>
+                        <h3>디자인 컨설팅 GPT</h3>
+                        <p>UI/UX 디자인 및 브랜딩 조언</p>
+                        <button class="gpt-btn">체험하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 서비스 이용 모달 -->
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('service-modal')">&times;</span>
+            <h2>🎨 블로그 버튼 생성기</h2>
+            <div class="modal-body">
+                <p>맞춤형 HTML 버튼을 쉽게 생성해보세요.</p>
+                <div class="button-generator">
+                    <div class="generator-form">
+                        <div class="form-group">
+                            <label>버튼 텍스트:</label>
+                            <input type="text" id="button-text" placeholder="버튼 텍스트를 입력하세요" value="클릭하세요">
+                        </div>
+                        <div class="form-group">
+                            <label>버튼 색상:</label>
+                            <input type="color" id="button-color" value="#6366f1">
+                        </div>
+                        <div class="form-group">
+                            <label>버튼 크기:</label>
+                            <select id="button-size">
+                                <option value="small">작음</option>
+                                <option value="medium" selected>중간</option>
+                                <option value="large">큼</option>
+                            </select>
+                        </div>
+                        <button class="generate-btn" onclick="generateButton()">버튼 생성하기</button>
+                    </div>
+                    <div class="preview-area">
+                        <h3>미리보기:</h3>
+                        <div id="button-preview">
+                            <button class="preview-button">클릭하세요</button>
+                        </div>
+                        <h3>HTML 코드:</h3>
+                        <textarea id="html-code" readonly></textarea>
+                        <button class="copy-btn" onclick="copyCode()">코드 복사</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 블로그 포스트 모달 -->
+    <div id="blog-post-modal" class="modal blog-modal">
+        <div class="modal-content blog-content">
+            <span class="close" onclick="closeBlogPost()">&times;</span>
+            <div class="blog-post-header">
+                <div class="blog-breadcrumb">
+                    <span onclick="closeBlogPost()">Master39_블로그</span> > <span id="post-category">AI 트렌드</span>
+                </div>
+                <h1 id="post-title">AI를 활용한 웹 개발의 미래</h1>
+                <div class="blog-post-meta">
+                    <div class="author-info">
+                        <div class="author-avatar">👨‍💻</div>
+                        <div class="author-details">
+                            <div class="author-name">Master39</div>
+                            <div class="post-info">
+                                <span id="post-date">2024.06.20</span> • 
+                                <span id="post-views">👁 1,234</span> • 
+                                <span>⏱ 5분 읽기</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">👍 좋아요</button>
+                        <button class="action-btn">📤 공유</button>
+                        <button class="action-btn">🔖 저장</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-post-content" id="blog-post-body">
+                <div class="post-intro">
+                    <p>🚀 <strong>인공지능이 웹 개발에 가져올 혁신적 변화</strong>에 대해 깊이 있게 탐구해보겠습니다. 개발자라면 반드시 알아야 할 AI 트렌드와 실무 적용 방법을 소개합니다.</p>
+                </div>
+
+                <div class="post-section">
+                    <h2>🎯 AI 웹 개발의 핵심 영역</h2>
+                    
+                    <div class="highlight-box">
+                        <h3>🤖 자동화된 코드 생성</h3>
+                        <p>GitHub Copilot, ChatGPT 같은 AI 도구들이 코드 작성 방식을 완전히 바꾸고 있습니다. 단순한 자동완성을 넘어 전체 함수와 컴포넌트를 생성할 수 있게 되었습니다.</p>
+                        
+                        <div class="code-example">
+                            <pre><code>// AI가 생성한 React 컴포넌트 예시
+const AIGeneratedButton = ({ onClick, children, variant = 'primary' }) => {
+  const buttonClass = `btn btn-${variant}`;
+  return (
+    &lt;button className={buttonClass} onClick={onClick}&gt;
+      {children}
+    &lt;/button&gt;
+  );
+};</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h3>🎨 스마트 UI/UX 디자인</h3>
+                        <p>AI는 사용자 행동 패턴을 분석하여 최적의 디자인을 제안합니다. A/B 테스트 없이도 높은 전환율을 달성할 수 있는 디자인을 자동으로 생성합니다.</p>
+                        
+                        <ul class="feature-list">
+                            <li>✅ 사용자 맞춤형 레이아웃 자동 생성</li>
+                            <li>✅ 색상 조합 최적화</li>
+                            <li>✅ 반응형 디자인 자동 적용</li>
+                            <li>✅ 접근성 개선 자동화</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h3>⚡ 성능 최적화</h3>
+                        <p>AI가 코드를 분석하여 성능 병목지점을 찾아내고, 최적화 방안을 제시합니다. 번들 크기 최적화, 캐싱 전략, 렌더링 최적화까지 자동화됩니다.</p>
+                    </div>
+                </div>
+
+                <div class="post-section">
+                    <h2>🛠 실제 활용 사례</h2>
+                    
+                    <div class="case-study">
+                        <h3>Case 1: E-commerce 플랫폼 개발</h3>
+                        <p>AI를 활용하여 개발 시간을 <strong>70% 단축</strong>한 실제 프로젝트 사례입니다.</p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">70%</div>
+                                <div class="stat-label">개발 시간 단축</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">85%</div>
+                                <div class="stat-label">버그 감소</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3배</div>
+                                <div class="stat-label">생산성 향상</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-section">
+                    <h2>🔮 미래 전망</h2>
+                    <p>앞으로 5년 내에 AI는 웹 개발의 <strong>필수 도구</strong>가 될 것입니다. 지금부터 준비하지 않으면 경쟁에서 뒤처질 수 있습니다.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">AI 코드 생성 도구 대중화</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">자동화된 테스팅 및 배포</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026</div>
+                            <div class="timeline-content">완전 자동화된 웹사이트 생성</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-section">
+                    <h2>💡 지금 시작할 수 있는 방법</h2>
+                    <div class="action-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>GitHub Copilot 사용 시작</h4>
+                                <p>가장 대중적인 AI 코딩 도구로 시작해보세요</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>ChatGPT로 코드 리뷰</h4>
+                                <p>작성한 코드의 개선점을 AI에게 물어보세요</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>AI 디자인 도구 활용</h4>
+                                <p>Figma AI, Framer 등을 활용해보세요</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-conclusion">
+                    <h2>🎯 결론</h2>
+                    <p>AI는 웹 개발의 패러다임을 바꾸고 있습니다. <strong>지금이 바로 변화에 적응할 때</strong>입니다. 더 효율적이고 창의적인 개발을 위해 AI를 활용해보세요!</p>
+                </div>
+
+                <div class="post-tags">
+                    <span class="tag">#AI</span>
+                    <span class="tag">#웹개발</span>
+                    <span class="tag">#미래기술</span>
+                    <span class="tag">#자동화</span>
+                    <span class="tag">#생산성</span>
+                </div>
+            </div>
+
+            <div class="blog-post-footer">
+                <div class="post-engagement">
+                    <button class="engagement-btn">👍 좋아요 (47)</button>
+                    <button class="engagement-btn">💬 댓글 (12)</button>
+                    <button class="engagement-btn">📤 공유</button>
+                </div>
+                
+                <div class="related-posts">
+                    <h3>📚 관련 글</h3>
+                    <div class="related-grid">
+                        <div class="related-item" onclick="openBlogPost('post2')">
+                            <h4>React와 AI의 완벽한 결합</h4>
+                            <p>2024.06.18</p>
+                        </div>
+                        <div class="related-item" onclick="openBlogPost('post5')">
+                            <h4>개발자를 위한 필수 AI 도구 10선</h4>
+                            <p>2024.06.10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 네이버 SEO 블로그 자동화 모달 -->
+    <div id="seo-blog-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('seo-blog-modal')">&times;</span>
+            <h2>🚀 네이버 SEO 블로그 자동화</h2>
+            <div class="modal-body">
+                <p>네이버 SEO 최상위 키워드 분석과 AI 블로그 글 자동 생성 서비스입니다.</p>
+                <div class="seo-blog-container">
+                    <div class="seo-form">
+                        <div class="form-group">
+                            <label>🎯 핵심 키워드:</label>
+                            <input type="text" id="seo-keyword" placeholder="예: 도마거치대, 보온병, 선풍기" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>✍️ 블로그 글 톤 & 매너:</label>
+                            <select id="blog-tone">
+                                <option value="friendly">친근하고 따뜻한 톤</option>
+                                <option value="professional">전문적이고 신뢰감 있는 톤</option>
+                                <option value="casual">편안하고 자연스러운 톤</option>
+                                <option value="trendy">트렌디하고 젊은 톤</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>📝 블로그 글 길이:</label>
+                            <select id="blog-length">
+                                <option value="short">짧게 (1000-1500자)</option>
+                                <option value="medium" selected>보통 (2000-3000자)</option>
+                                <option value="long">길게 (3000-5000자)</option>
+                            </select>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn keyword-btn" onclick="analyzeKeywords()">
+                                🔍 키워드 분석 시작
+                            </button>
+                            <button class="action-btn blog-btn" onclick="generateBlog()" id="generate-blog-btn" disabled>
+                                ✨ 블로그 글 생성
+                            </button>
+                        </div>
+                    </div>
+                    <div class="seo-results">
+                        <div class="result-section">
+                            <h3>📊 키워드 분석 결과</h3>
+                            <div id="keyword-progress" class="progress-container" style="display: none;">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="keyword-progress-bar"></div>
+                                </div>
+                                <div class="progress-text" id="keyword-progress-text">분석 중...</div>
+                            </div>
+                            <div id="keyword-results" class="results-area">
+                                <p class="placeholder-text">🎯 키워드를 입력하고 분석을 시작해보세요!</p>
+                            </div>
+                        </div>
+                        <div class="result-section">
+                            <h3>📝 생성된 블로그 글</h3>
+                            <div id="blog-progress" class="progress-container" style="display: none;">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="blog-progress-bar"></div>
+                                </div>
+                                <div class="progress-text" id="blog-progress-text">AI가 블로그 글을 작성 중...</div>
+                            </div>
+                            <div id="blog-results" class="results-area">
+                                <p class="placeholder-text">📝 키워드 분석 후 블로그 글을 생성할 수 있습니다!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 블로그글쓰기 자동화 모달 -->
+    <div id="blog-automation-modal" class="modal">
+        <div class="modal-content blog-automation-content">
+            <span class="close" onclick="closeModal('blog-automation-modal')">&times;</span>
+            <h2>✍️ 블로그글쓰기 자동화</h2>
+            <div class="modal-body">
+                <p>네이버 블로그 상위 제목을 분석하여 GPT로 새로운 제목을 생성하고, 완성된 블로그 글까지 자동으로 작성합니다.</p>
+                
+                <div class="blog-automation-container">
+                    <!-- 설정 영역 -->
+                    <div class="automation-settings">
+                        <h3>🔧 자동화 설정</h3>
+                        
+                        <div class="form-group">
+                            <label>🔍 분석할 키워드:</label>
+                            <input type="text" id="blog-keyword" placeholder="예: 가정의 달, 파이썬, 운동 등" value="">
+                        </div>
+                        
+
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>📝 모델 선택:</label>
+                                <select id="blog-model">
+                                    <option value="gpt-4o">GPT-4o (최신, 추천)</option>
+                                    <option value="gpt-3.5-turbo">GPT-3.5 Turbo (저렴, 빠름)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>📊 생성할 제목 수:</label>
+                                <select id="title-count">
+                                    <option value="5">5개</option>
+                                    <option value="10" selected>10개</option>
+                                    <option value="15">15개</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>✏️ 최소 글자 수:</label>
+                                <input type="number" id="min-chars" value="1000" min="500" max="5000">
+                            </div>
+                            <div class="form-group">
+                                <label>📖 최대 글자 수:</label>
+                                <input type="number" id="max-chars" value="1500" min="800" max="10000">
+                            </div>
+                        </div>
+                        
+                        <div class="automation-buttons">
+                            <button class="automation-btn analyze-btn" onclick="startBlogAnalysis()">
+                                🔍 제목 분석 & 생성
+                            </button>
+                            <button class="automation-btn write-btn" onclick="startBlogWriting()" id="write-btn" disabled>
+                                ✍️ 블로그 글 작성
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 결과 영역 -->
+                    <div class="automation-results">
+                        <!-- 네이버 제목 분석 결과 -->
+                        <div class="result-panel">
+                            <h3>📋 네이버 블로그 상위 제목 (30개)</h3>
+                            <div id="naver-titles-progress" class="progress-container" style="display: none;">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="naver-progress-bar"></div>
+                                </div>
+                                <div class="progress-text">네이버 블로그 제목 수집 중...</div>
+                            </div>
+                            <div id="naver-titles-results" class="results-panel">
+                                <p class="placeholder-text">🔍 키워드를 입력하고 분석을 시작해보세요!</p>
+                            </div>
+                        </div>
+                        
+                        <!-- GPT 분석 결과 -->
+                        <div class="result-panel">
+                            <h3>🤖 GPT 제목 분석 & 생성</h3>
+                            <div id="gpt-analysis-progress" class="progress-container" style="display: none;">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="gpt-analysis-bar"></div>
+                                </div>
+                                <div class="progress-text">GPT가 제목을 분석하고 새로운 제목을 생성 중...</div>
+                            </div>
+                            <div id="gpt-analysis-results" class="results-panel">
+                                <p class="placeholder-text">📝 제목 분석 후 GPT 분석 결과가 표시됩니다!</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 생성된 제목 목록 -->
+                        <div class="result-panel">
+                            <h3>✨ 생성된 블로그 제목</h3>
+                            <div id="generated-titles-results" class="results-panel">
+                                <p class="placeholder-text">🎯 GPT 분석 완료 후 새로운 제목들이 표시됩니다!</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 블로그 글 작성 결과 -->
+                        <div class="result-panel">
+                            <h3>📝 완성된 블로그 글</h3>
+                            <div id="blog-writing-progress" class="progress-container" style="display: none;">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="blog-writing-bar"></div>
+                                </div>
+                                <div class="progress-text" id="blog-writing-text">블로그 글 작성 중...</div>
+                            </div>
+                            <div id="blog-writing-results" class="results-panel">
+                                <p class="placeholder-text">📖 제목 생성 완료 후 블로그 글 작성을 시작할 수 있습니다!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 자료 신청 모달 -->
+    <div id="banner-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('banner-modal')">&times;</span>
+            <h2>📋 노코드 웹 개발 자료 신청</h2>
+            <div class="modal-body">
+                <p>노코드 웹 개발에 대한 상세 자료를 무료로 받아보세요.</p>
+                <form class="request-form">
+                    <div class="form-group">
+                        <label>이름 *</label>
+                        <input type="text" required placeholder="이름을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label>이메일 *</label>
+                        <input type="email" required placeholder="이메일을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label>관심 분야</label>
+                        <select>
+                            <option>웹사이트 제작</option>
+                            <option>모바일 앱 개발</option>
+                            <option>전자상거래</option>
+                            <option>블로그/포트폴리오</option>
+                            <option>기타</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>추가 메시지</label>
+                        <textarea placeholder="궁금한 점이나 요청사항을 적어주세요"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">자료 신청하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

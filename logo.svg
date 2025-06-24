@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="120" height="40">
+  <!-- 배경 -->
+  <rect width="120" height="40" rx="8" fill="#ffffff" stroke="#e5e5e5" stroke-width="1"/>
+  
+  <!-- 로고 아이콘 부분 -->
+  <g transform="translate(8, 8)">
+    <!-- 원형 배경 -->
+    <circle cx="12" cy="12" r="11" fill="#667eea" stroke="#764ba2" stroke-width="1"/>
+    
+    <!-- 삼각형 플라스크 -->
+    <g transform="translate(12, 12)">
+      <!-- 플라스크 몸체 -->
+      <path d="M-4,-6 L4,-6 L6,4 L-6,4 Z" fill="#ffffff" stroke="#d4af37" stroke-width="0.8"/>
+      <!-- 플라스크 목 -->
+      <rect x="-1.5" y="-9" width="3" height="4" fill="#ffffff" stroke="#d4af37" stroke-width="0.8"/>
+      <!-- 플라스크 입구 -->
+      <ellipse cx="0" cy="-9" rx="2" ry="0.8" fill="#ffffff" stroke="#d4af37" stroke-width="0.5"/>
+      <!-- 내부 패턴 -->
+      <path d="M-3,-4 L3,-4 L2,0 L-2,0 Z" fill="#f8f8f8" stroke="#d4af37" stroke-width="0.3"/>
+      <!-- 거품 -->
+      <circle cx="-1" cy="-7.5" r="0.5" fill="#d4af37" opacity="0.7"/>
+      <circle cx="0.5" cy="-8" r="0.4" fill="#d4af37" opacity="0.5"/>
+      <circle cx="1.5" cy="-7" r="0.3" fill="#d4af37" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <!-- 텍스트 부분 -->
+  <text x="32" y="16" font-family="'Noto Sans KR', Arial, sans-serif" font-size="11" font-weight="700" fill="#333333">master39</text>
+  <text x="32" y="28" font-family="'Noto Sans KR', Arial, sans-serif" font-size="8" font-weight="400" fill="#666666">오늘 0명 방문</text>
+</svg> 

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" width="240" height="120">
+  <!-- 삼각 플라스크 (A처럼 보이게) -->
+  <g transform="translate(80, 50)">
+    <!-- 플라스크 몸체 (삼각형) -->
+    <path d="M0,-35 L25,15 L-25,15 Z" 
+          fill="rgba(255, 255, 255, 0.9)" 
+          stroke="#1e3a8a" 
+          stroke-width="3" 
+          stroke-linejoin="round"/>
+    
+    <!-- 플라스크 목 (긴 원통형) -->
+    <rect x="-5" y="-50" width="10" height="18" 
+          fill="rgba(255, 255, 255, 0.9)" 
+          stroke="#1e3a8a" 
+          stroke-width="3"/>
+    
+    <!-- 플라스크 입구 -->
+    <ellipse cx="0" cy="-50" rx="6" ry="2" 
+             fill="rgba(255, 255, 255, 0.9)" 
+             stroke="#1e3a8a" 
+             stroke-width="2"/>
+    
+    <!-- 내부 액체 (파란색) -->
+    <path d="M0,-25 L18,8 L-18,8 Z" 
+          fill="#3b82f6" 
+          fill-opacity="0.7"/>
+    
+    <!-- 액체 표면 -->
+    <line x1="-18" y1="8" x2="18" y2="8" 
+          stroke="#1e40af" 
+          stroke-width="2"/>
+    
+    <!-- 눈금선들 -->
+    <line x1="-20" y1="10" x2="-15" y2="10" stroke="#1e3a8a" stroke-width="1"/>
+    <line x1="-22" y1="5" x2="-15" y2="5" stroke="#1e3a8a" stroke-width="1"/>
+    <line x1="-23" y1="0" x2="-15" y2="0" stroke="#1e3a8a" stroke-width="1"/>
+    <line x1="-24" y1="-5" x2="-15" y2="-5" stroke="#1e3a8a" stroke-width="1"/>
+    
+    <!-- 거품 효과 -->
+    <circle cx="-8" cy="-5" r="1.2" fill="#60a5fa" opacity="0.8"/>
+    <circle cx="0" cy="-8" r="1" fill="#60a5fa" opacity="0.6"/>
+    <circle cx="6" cy="-3" r="0.8" fill="#60a5fa" opacity="0.7"/>
+  </g>
+  
+  <!-- 긴 실린더 (I처럼 보이게) -->
+  <g transform="translate(140, 50)">
+    <!-- 실린더 몸체 (긴 원통) -->
+    <rect x="-8" y="-45" width="16" height="60" 
+          fill="rgba(255, 255, 255, 0.9)" 
+          stroke="#1e3a8a" 
+          stroke-width="3"/>
+    
+    <!-- 실린더 위쪽 입구 -->
+    <ellipse cx="0" cy="-45" rx="8" ry="3" 
+             fill="rgba(255, 255, 255, 0.9)" 
+             stroke="#1e3a8a" 
+             stroke-width="2"/>
+    
+    <!-- 실린더 아래쪽 바닥 -->
+    <ellipse cx="0" cy="15" rx="8" ry="3" 
+             fill="rgba(255, 255, 255, 0.9)" 
+             stroke="#1e3a8a" 
+             stroke-width="2"/>
+    
+    <!-- 내부 액체 (파란색) -->
+    <rect x="-6" y="-30" width="12" height="35" 
+          fill="#3b82f6" 
+          fill-opacity="0.7"/>
+    
+    <!-- 액체 표면 -->
+    <ellipse cx="0" cy="-30" rx="6" ry="2" 
+             fill="#1e40af" 
+             fill-opacity="0.8"/>
+    
+    <!-- 눈금선들 (오른쪽) -->
+    <line x1="10" y1="10" x2="15" y2="10" stroke="#1e3a8a" stroke-width="1"/>
+    <line x1="10" y1="0" x2="15" y2="0" stroke="#1e3a8a" stroke-width="1"/>
+    <line x1="10" y1="-10" x2="15" y2="-10" stroke="#1e3a8a" stroke-width="1"/>
+    <line x1="10" y1="-20" x2="15" y2="-20" stroke="#1e3a8a" stroke-width="1"/>
+    <line x1="10" y1="-30" x2="15" y2="-30" stroke="#1e3a8a" stroke-width="1"/>
+    
+    <!-- 눈금 숫자들 -->
+    <text x="18" y="12" font-family="Arial" font-size="8" fill="#1e3a8a">50</text>
+    <text x="18" y="2" font-family="Arial" font-size="8" fill="#1e3a8a">100</text>
+    <text x="18" y="-8" font-family="Arial" font-size="8" fill="#1e3a8a">150</text>
+    <text x="18" y="-18" font-family="Arial" font-size="8" fill="#1e3a8a">200</text>
+    <text x="18" y="-28" font-family="Arial" font-size="8" fill="#1e3a8a">250</text>
+    
+    <!-- 거품 효과 -->
+    <circle cx="-2" cy="-15" r="1" fill="#60a5fa" opacity="0.8"/>
+    <circle cx="2" cy="-20" r="0.8" fill="#60a5fa" opacity="0.6"/>
+    <circle cx="0" cy="-25" r="0.6" fill="#60a5fa" opacity="0.7"/>
+  </g>
+  
+  <!-- Master39's 텍스트 (중앙 밑에) -->
+  <text x="120" y="85" text-anchor="middle" 
+        font-family="'Noto Sans KR', Arial, sans-serif" 
+        font-size="18" 
+        font-weight="bold" 
+        fill="#1e3a8a">Master39's</text>
+  
+  <!-- Lab 텍스트 (Master39's 밑에) -->
+  <text x="120" y="102" text-anchor="middle" 
+        font-family="'Noto Sans KR', Arial, sans-serif" 
+        font-size="16" 
+        font-weight="600" 
+        fill="#1e3a8a">Lab</text>
+</svg> 
